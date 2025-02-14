@@ -20,10 +20,10 @@ function info() {
 
   return {
     apiversion: "1",
-    author: "",       // TODO: Your Battlesnake Username
+    author: "serburrs",       // TODO: Your Battlesnake Username
     color: "#888888", // TODO: Choose color
-    head: "default",  // TODO: Choose head
-    tail: "default",  // TODO: Choose tail
+    head: "all-seeing",  // TODO: Choose head
+    tail: "coffee",  // TODO: Choose tail
   };
 }
 
@@ -69,6 +69,19 @@ function move(gameState) {
   // TODO: Step 1 - Prevent your Battlesnake from moving out of bounds
   // boardWidth = gameState.board.width;
   // boardHeight = gameState.board.height;
+
+  if (myHead.x = 0) {        // Head is at x=0, don't move left
+    isMoveSafe.left = false;
+
+  } else if (myHead.x = 10) { // Head is at x=10, don't move right
+    isMoveSafe.right = false;
+
+  } else if (myHead.y = 0) { // Head is at y=0, don't move down
+    isMoveSafe.down = false;
+
+  } else if (myHead.y = 10) { // Head is at y=10, don't move up
+    isMoveSafe.up = false;
+  }
 
   // TODO: Step 2 - Prevent your Battlesnake from colliding with itself
   // myBody = gameState.you.body;
